@@ -23,7 +23,11 @@ def make_dataset_fromlst(listfilename):
     with open(listfilename) as f:
         content = f.readlines()
         for x in content:
-            imgname, segname, depthname, HHAname = x.strip().split(' ')
+            imgname1,imgname2, segname1,segname2, depthname1,depthname2, HHAname1, HHAname2 = x.strip().split(' ')
+            imgname = imgname1+' '+imgname2
+            segname = segname1 + ' ' + segname2
+            depthname = depthname1 + ' ' + depthname2
+            HHAname = HHAname1 + ' ' + HHAname2
             images += [imgname]
             segs += [segname]
             depths += [depthname]
