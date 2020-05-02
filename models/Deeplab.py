@@ -171,7 +171,7 @@ class Deeplab_Solver(BaseModel):
         # lr = self.old_lr * drop_ratio
 
         self.writer.add_scalar(self.opt.name+'/Learning_Rate/', lr, step)
-
+	
 	self.optimizer.param_groups[0]['lr'] = lr
 	self.optimizer.param_groups[1]['lr'] = lr
 	self.optimizer.param_groups[2]['lr'] = lr
