@@ -4,14 +4,13 @@ import torch.utils.model_zoo as model_zoo
 import torch
 from .base_model import BaseModel
 import numpy as np
-from . import losses
+from . import losses, VGG_Deeplab
 import shutil
 from utils.util import *
 from torch.autograd import Variable
 from collections import OrderedDict
 from tensorboardX import SummaryWriter
 import os
-import VGG_Deeplab as VGG_Deeplab
 
 
 class Deeplab_VGG(nn.Module):
