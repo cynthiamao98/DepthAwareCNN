@@ -1,5 +1,6 @@
 import os
 import torch
+import setuptools
 # from torch.utils.ffi import create_extension
 from pkg_resources import parse_version
 if parse_version(torch.__version__) >= parse_version("1.0.0"):
