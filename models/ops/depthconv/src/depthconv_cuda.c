@@ -2,7 +2,8 @@
 
 #include "depthconv_cuda_kernel.h"
 
-extern THCState *state;
+// extern THCState *state;
+THCState *state = at::globalContext().lazyInitCUDA();
 
 void shape_check(THCState *state, THCudaTensor *input, THCudaTensor *input_depth,
                  THCudaTensor *gradOutput, THCudaTensor *weight, THCudaTensor *bias, int kH, int kW,
